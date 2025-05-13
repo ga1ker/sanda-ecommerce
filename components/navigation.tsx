@@ -13,9 +13,8 @@ import {
     SheetTrigger
 } from "@/components/ui/sheet"
 import { Button } from "./ui/button";
-import { Menu, ShoppingBag } from "lucide-react";
-import { Input } from "./ui/input";
-import { InputSearch } from "./input-search";
+import { Menu } from "lucide-react";
+import { Logo } from "./logo";
 
 const routes = [
     {
@@ -25,6 +24,14 @@ const routes = [
     {
         href: "/categorias",
         label: "Categorías"
+    },
+    {
+        href: "/ofertas",
+        label: "Ofertas"
+    },
+    {
+        href: "/vender",
+        label: "Vender"
     },
 ]
 
@@ -47,13 +54,13 @@ export const Navigation = () => {
                     <Button
                         variant="outline"
                         size="sm"
-                        className="font-normal bg-white/10 hover:bg-white/20 hover:text-white border-none focus-visible:ring-offset-0 focus-visible:ring-transparent outline-none focus:bg-white/30 transition"
+                        className="font-normal bg-white/10 h-[38px] hover:bg-white/20 text-white/70 hover:text-white border-none focus-visible:ring-offset-0 focus-visible:ring-transparent outline-none focus:bg-white/30 transition"
                     >
                         <Menu className="size-4" />
                     </Button>
                 </SheetTrigger>
                 <SheetContent side="left" className="px-2">
-                    <SheetTitle>Navigation</SheetTitle>
+                    <SheetTitle><Logo /></SheetTitle>
                     <nav className="flex flex-col gap-y-2 pt-2">
                         {routes.map((route) => (
                             <Button
@@ -80,15 +87,10 @@ export const Navigation = () => {
                     key={route.href}
                     label={route.label}
                     href={route.href}
+                    isActive={pathname == route.href}
                 />
             ))
             }
-            <InputSearch />
-            <Button
-                variant="ghost"
-            >
-                <ShoppingBag />
-            </Button>
         </div>
     )
 }
