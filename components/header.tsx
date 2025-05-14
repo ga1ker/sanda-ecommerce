@@ -11,7 +11,7 @@ export const Header = () => {
 
     if (isMobile) {
         return (
-            <header className="flex justify-between w-screen bg-[#80cbc4] p-7">
+            <header className="flex justify-between space-x-2 w-screen bg-[#80cbc4] p-7">
                 <Navigation />
                 <InputSearch />
                 <UserNav />
