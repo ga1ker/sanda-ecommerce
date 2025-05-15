@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import { Button } from "./ui/button";
 import { ShoppingCart } from "lucide-react";
@@ -6,7 +5,7 @@ import { ShoppingCart } from "lucide-react";
 
 export const ProductCard = () => {
     return ( 
-        <div className="group relative overflow-hidden rounded-lg border">
+        <div className="group relative bg-white overflow-hidden rounded-lg border">
             <Link href="#" className="absolute inset-0 z-10">
             <span className="sr-only">Ver producto</span>
             </Link>
