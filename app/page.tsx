@@ -1,28 +1,11 @@
-import { Header } from "@/components/header";
+import { CarouselHome } from "@/components/carousel";
 import { ProductCard } from "@/components/product-card";
 
 export default function Home() {
   return (
     <div className="">
-      <div className="grid lg:grid-cols-4 md:grid-cols-4 grid-cols-1 gap-4 px-5">
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
+      <CarouselHome />
+      <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4 px-5">
             <ProductCard />
             <ProductCard />
             <ProductCard />

@@ -2,7 +2,6 @@ import Link from "next/link";
 import { Button } from "./ui/button";
 import { ShoppingCart } from "lucide-react";
 
-
 export const ProductCard = () => {
     return ( 
         <div className="group relative bg-white overflow-hidden rounded-lg border">

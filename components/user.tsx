@@ -16,14 +16,14 @@ export const UserNav = () => {
                     <Button variant={"secondary"}>Registrarse</Button>
                 </PopoverContent>
             </Popover>
-            <Button
-                variant="ghost"
-                className="hover:bg-white/20 transition p-2 rounded-md"
-            >
-                <Link href={"carrito"}>
-                    <ShoppingBag className="size-5" />
-                </Link>
-            </Button>
+            <Link href={"carrito"}>
+                <Button
+                    variant="ghost"
+                    className="hover:bg-white/20 transition rounded-md"
+                >
+                        <ShoppingBag className="size-5" />
+                </Button>
+            </Link>
         </div>
     );
 }

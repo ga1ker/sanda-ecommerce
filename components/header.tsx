@@ -17,21 +17,18 @@ export const Header = () => {
     if (isMobile) {
         return (
             <>
-                <header className="flex mb-20 fixed top-0 z-10 justify-between space-x-2 w-screen bg-[#80cbc4] p-7">
+                <header className="flex top-0 z-10 justify-between space-x-2 w-screen bg-[#80cbc4] p-7">
                     <Navigation />
                     <InputSearch />
                     <UserNav />
                 </header>
-                {isHome && (
-                    <div className="bg-[#80cbc4] fixed top-12 z-0 h-32 w-screen"></div>
-                )}
             </>
         );
     }
 
     return (
         <>
-            <header className="flex fixed top-0 z-10 justify-between space-x-2 w-screen bg-[#80cbc4] p-7">
+            <header className="flex top-0 z-10 justify-between space-x-2 w-screen bg-[#80cbc4] p-7">
                 <Logo />
                 <div className="flex gap-3 w-full justify-center">
                     <Navigation />
@@ -39,9 +36,6 @@ export const Header = () => {
                 </div>
                 <UserNav />
             </header>
-            {isHome && (
-                <div className="bg-[#80cbc4] fixed top-12 z-0 h-32 w-screen"></div>
-            )}
         </>
     );
 }
