@@ -15,6 +15,7 @@ import {
 import { Button } from "./ui/button";
 import { Menu } from "lucide-react";
 import { Logo } from "./logo";
+import {ThemeToggle} from "./theme-toggle";
 
 const routes = [
     {
@@ -59,7 +60,7 @@ export const Navigation = () => {
                         <Menu className="size-4" />
                     </Button>
                 </SheetTrigger>
-                <SheetContent side="left" className="px-2 pt-10">
+                <SheetContent side="left" className="px-2 pt-10 bg-white dark:bg-black">
                     <SheetTitle><Logo /></SheetTitle>
                     <nav className="flex flex-col gap-y-2 pt-2">
                         {routes.map((route) => (
@@ -72,6 +73,7 @@ export const Navigation = () => {
                                 {route.label}
                             </Button>
                         ))}
+                        <ThemeToggle />
                     </nav>
                 </SheetContent>
             </Sheet>

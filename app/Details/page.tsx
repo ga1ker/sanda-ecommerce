@@ -34,7 +34,7 @@ const  DetailPage = () => {
                             {Opciones.map((src, index) =>(                                
                                 <Button className=" flex justify-start bg-teal-000 border- hover:bg-teal-400 border-0 " key={index}>
                                     <img src={src.image} alt={src.nombre} className="w-8 rounded-full"/>
-                                    <CardTitle className="">{src.nombre}</CardTitle>
+                                    <CardTitle className="text-black">{src.nombre}</CardTitle>
                                 </Button>
                             ))}
                         </CardContent>

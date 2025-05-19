@@ -7,7 +7,7 @@ export default function Carrito () {
         <div>
             <div className="overflow-hidden">
                 <div className="overflow-hidden">
-                    <div className="pointer-events-none fixed inset-y-0 top-20 right-0 flex max-w-full">
+                    <div className="pointer-events-none h-screen inset-y-0 top-20 right-0 flex max-w-full">
                         <div className="pointer-events-auto w-screen transform transition duration-500 ease-in-out data-closed:translate-x-full sm:duration-700">
                             <div className="flex h-full flex-col overflow-y-scroll shadow-xl">
                                 <div className="flex-1 overflow-y-auto px-4 py-6 sm:px-6">
@@ -21,7 +21,7 @@ export default function Carrito () {
                                                 {/*productos*/}
                                                 <li className="flex py-6">
                                                     <div className="size-24 shrink-0 overflow-hidden rounded-md border border-gray-200">
-                                                        <img alt="producto" src="/logo.png" className="size-full object-cover" />
+                                                        <img alt="producto" src="/sanda_isotipo.png" className="size-full object-cover" />
                                                     </div>
 
                                                     <div className="ml-4 flex flex-1 flex-col">

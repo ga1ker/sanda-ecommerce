@@ -1,6 +1,8 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/header";
+import { Footer } from "@/components/footer";
+import "flowbite";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -23,14 +25,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es">
+    <html lang="es" className="">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Header />
-        <div className="top-52 -mt-28 relative">
+        <div className="min-h-dvh dark:bg-gray-900 mt-23 bg-teal-400/10">
           {children}
         </div>
+        <Footer />
       </body>
     </html>
   );
