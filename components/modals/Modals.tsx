@@ -55,19 +55,19 @@ export const Modal = ({ isOpen, onClose, title, children, footer }: ModalProps) 
             transition={{ duration: 0.3 }}
             className="relative w-4/5 max-h-[90vh] overflow-y-auto rounded-2xl bg-[#E0F2F1] text-black shadow-lg"
           >
-            <div className="flex justify-between items-center p-4 border-b border-black/10">
+            <div className="flex justify-between items-center p-4 border-b border-black/10 dark:bg-gray-800 dark:text-white">
               <h2 className="text-xl font-semibold">{title}</h2>
               <button onClick={onClose} className="hover:text-red-500 cursor-pointer">
                 <X className="size-5" />
               </button>
             </div>
 
-            <div className="p-4">
+            <div className="p-4 dark:bg-gray-800 dark:text-white">
               {children}
             </div>
 
             {footer && (
-              <div className="p-4 border-t border-black/10">
+              <div className="p-4 border-t border-black/10 dark:bg-gray-800 dark:text-white">
                 {footer}
               </div>
             )}

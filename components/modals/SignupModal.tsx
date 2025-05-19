@@ -4,9 +4,11 @@ import { Modal } from "./Modals";
 import { useModalStore } from "@/store/useModalStore";
 import { Button } from "../ui/button";
 import { useState } from "react";
+import { Label } from "../ui/label";
+import { Input } from "../ui/input";
 
 export const SignupModal = () => {
-    const { signupOpen, closeSignup } = useModalStore();
+    const { signupOpen, closeSignup, openLogin } = useModalStore();
     const [name, setName] = useState("");
     const [lastname, setLastName] = useState("");
     const [email, setEmail] = useState("");
@@ -27,24 +29,30 @@ export const SignupModal = () => {
             onClose={closeSignup}
             title="Crear cuenta"
             footer={
-                <div className="flex justify-end">
+                <div className="flex justify-end space-x-2">
+                    <Button onClick={() => {
+                        closeSignup();
+                        openLogin();
+                    }}>Ya tengo cuenta</Button>
                     <Button onClick={handleSignup} className="bg-[#26A69A] hover:bg-[#4DB6AC] cursor-pointer">Registrarse</Button>
                 </div>
             }
         >
             <form className="space-y-4">
                 <div>
-                    <label className="block text-sm font-medium">Nombre</label>
-                    <input
+                    <Label htmlFor="name" className="block text-sm font-medium">Nombre</Label>
+                    <Input
                         type="text"
+                        id="name"
                         value={name}
                         onChange={(e) => setName(e.target.value)}
                         className="w-full rounded-md border p-2"
                     />
                 </div>
                 <div>
-                    <label className="block text-sm font-medium">Apellidos</label>
-                    <input
+                    <Label htmlFor="lastname" className="block text-sm font-medium">Apellidos</Label>
+                    <Input
+                        id="lastname"
                         type="text"
                         value={lastname}
                         onChange={(e) => setLastName(e.target.value)}
@@ -52,8 +60,9 @@ export const SignupModal = () => {
                     />
                 </div>
                 <div>
-                    <label className="block text-sm font-medium">Correo electrónico</label>
-                    <input
+                    <Label htmlFor="email" className="block text-sm font-medium">Correo electrónico</Label>
+                    <Input
+                        id="email"
                         type="email"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
@@ -61,8 +70,9 @@ export const SignupModal = () => {
                     />
                 </div>
                 <div>
-                    <label className="block text-sm font-medium">Contraseña</label>
-                    <input
+                    <Label htmlFor="password" className="block text-sm font-medium">Contraseña</Label>
+                    <Input
+                        id="password"
                         type="password"
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
@@ -70,8 +80,9 @@ export const SignupModal = () => {
                     />
                 </div>
                 <div>
-                    <label className="block text-sm font-medium">Día de nacimiento</label>
-                    <input
+                    <Label htmlFor="nacimiento" className="block text-sm font-medium">Día de nacimiento</Label>
+                    <Input
+                        id="nacimiento"
                         type="date"
                         value={date}
                         onChange={(e) => setDate(e.target.value)}
