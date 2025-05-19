@@ -25,12 +25,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es" className="bg-[#80cbc4]">
+    <html lang="es" className="">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Header />
-        <div className="min-h-dvh">
+        <div className="min-h-dvh dark:bg-gray-900 mt-23 bg-teal-400/10">
           {children}
         </div>
         <Footer />

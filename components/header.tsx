@@ -7,6 +7,7 @@ import { Navigation } from "./navigation";
 import { UserNav } from "./user";
 import { InputSearch } from "./input-search";
 import { useMemo } from "react";
+import {ThemeToggle} from "./theme-toggle";
 
 export const Header = () => {
     const pathname = usePathname();
@@ -17,7 +18,7 @@ export const Header = () => {
     if (isMobile) {
         return (
             <>
-                <header className="flex top-0 z-10 justify-between space-x-2 w-screen bg-[#80cbc4] p-7">
+                <header className="flex top-0 z-10 fixed justify-between space-x-2 w-screen bg-teal-400 transition dark:bg-gray-900 p-7">
                     <Navigation />
                     <InputSearch />
                     <UserNav />
@@ -28,11 +29,12 @@ export const Header = () => {
 
     return (
         <>
-            <header className="flex top-0 z-10 justify-between space-x-2 w-screen bg-[#80cbc4] p-7">
+            <header className="flex top-0 z-50 fixed mb-48 justify-between space-x-2 w-screen transition dark:bg-gray-900 bg-teal-400 p-7">
                 <Logo />
                 <div className="flex gap-3 w-full justify-center">
                     <Navigation />
                     <InputSearch />
+                    <ThemeToggle />
                 </div>
                 <UserNav />
             </header>

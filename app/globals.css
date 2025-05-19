@@ -1,6 +1,12 @@
+@tailwind base;  /* Primero */
+@tailwind components;
+@tailwind utilities;
+/* Luego otros imports */
+
 @import "tailwindcss";
 @import "flowbite";
 @import "tw-animate-css";
+
 
 @custom-variant dark (&:is(.dark *));
 
@@ -46,7 +52,7 @@
 
 :root {
   --radius: 0.625rem;
-  --background: oklch(1 0 0);
+  --background: 255 255 255;
   --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0 0);
