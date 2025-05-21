@@ -5,14 +5,14 @@ import { ShoppingCart } from "lucide-react";
 export const ProductCard = () => {
     return ( 
         <div className="group relative dark:bg-gray-800 dark:text-white transition bg-white  overflow-hidden rounded-lg border">
-            <Link href="#" className="absolute inset-0 z-10">
+            <Link href="/details" className="absolute inset-0 z-10">
             <span className="sr-only">Ver producto</span>
             </Link>
             <div
             className="h-30 w-full object-cover transition-transform group-hover:scale-105 bg-green-100"
             />
             <div className="p-2">
-            <h3 className="font-semibold">Producto</h3>
+            <h3 className="font-semibold text-black dark:text-white">Producto</h3>
             <p className="text-sm text-gray-500">Categoría</p>
             <div className="mt-2 flex items-center justify-between">
                 <span className="font-bold text-emerald-600">$99.99</span>

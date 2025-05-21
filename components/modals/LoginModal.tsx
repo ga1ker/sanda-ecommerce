@@ -23,10 +23,6 @@ export const LoginModal = () => {
       title="Iniciar sesión"
       footer={
         <div className="flex justify-end space-x-2">
-          <Button onClick={() => {
-            closeLogin()
-            openSignup()
-          }}>Registrarme</Button>
           <Button onClick={handleLogin} className="bg-[#26A69A] hover:bg-[#4DB6AC] cursor-pointer">Iniciar</Button>
         </div>
       }
