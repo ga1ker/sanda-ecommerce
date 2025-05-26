@@ -10,13 +10,10 @@ export const Footer = () => {
                     </Link>
                     <ul className="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
                         <li>
-                            <Link href="#" className="hover:underline me-4 md:me-6">Sobre nosotros</Link>
+                            <Link href="/aboutus" className="hover:underline me-4 md:me-6">Sobre nosotros</Link>
                         </li>
                         <li>
-                            <Link href="#" className="hover:underline me-4 md:me-6">Politica de privacidad</Link>
-                        </li>
-                        <li>
-                            <Link href="#" className="hover:underline">Contacto</Link>
+                            <Link href="/aboutus" className="hover:underline">Acerca de</Link>
                         </li>
                     </ul>
                 </div>
