@@ -13,25 +13,25 @@ export default function SobreNosotros() {
 
   const team = [
     {
-      name: "María González",
+      name: "Ismael Otamendi Sanchez",
       role: "CEO & Fundadora",
       image: "/placeholder.svg?height=300&width=300",
       description: "Visionaria con más de 15 años de experiencia en e-commerce",
     },
     {
-      name: "Carlos Rodríguez",
+      name: "Gadiel Alcazar Bernal",
       role: "Director de Tecnología",
       image: "/placeholder.svg?height=300&width=300",
       description: "Experto en desarrollo web y experiencia de usuario",
     },
     {
-      name: "Ana Martínez",
+      name: "Carlos Eduardo Cuamatzi Conde",
       role: "Directora de Marketing",
       image: "/placeholder.svg?height=300&width=300",
       description: "Especialista en marketing digital y estrategias de crecimiento",
     },
     {
-      name: "Luis Fernández",
+      name: "Gabriel García Luna",
       role: "Director de Operaciones",
       image: "/placeholder.svg?height=300&width=300",
       description: "Responsable de la logística y cadena de suministro",
