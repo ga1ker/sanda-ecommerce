@@ -29,7 +29,7 @@ export const Header = () => {
 
     return (
         <>
-            <header className="flex top-0 z-50 fixed mb-48 justify-between space-x-2 w-screen transition dark:bg-gray-900 bg-teal-400 p-7">
+            <header className="flex top-0 z-50 fixed mb-48 justify-between space-x-2 w-screen transition dark:bg-gray-900 bg-blue-400 p-7">
                 <Logo />
                 <div className="flex gap-3 w-full justify-center">
                     <Navigation />
