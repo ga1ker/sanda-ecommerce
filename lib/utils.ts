@@ -6,7 +6,7 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 export function isLoggedIn() {
-  const token : string | null = "a7dajsdgj";
+  const token : string | null = "";
   if (token && token.length > 0 && token != null && token != undefined && token != "") {
     return true;
     getUserInfo(token)

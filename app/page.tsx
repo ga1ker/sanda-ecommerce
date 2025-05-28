@@ -49,7 +49,7 @@ export default function HomePage() {
     {
       icon: <Truck className="h-8 w-8 text-teal-600 dark:text-teal-200" />,
       title: "Envío Gratis",
-      description: "En compras mayores a $50",
+      description: "En compras mayores a $1000",
     },
     {
       icon: <Shield className="h-8 w-8 text-teal-600 dark:text-teal-200" />,
@@ -109,7 +109,7 @@ export default function HomePage() {
                       <Star key={i} className="h-4 w-4 fill-current" />
                     ))}
                   </div>
-                  <span className="text-sm font-medium">4.9/5 (2,847 reseñas)</span>
+                  <span className="text-sm font-medium">4.9/5 (2 reseñas)</span>
                 </div>
               </div>
             </div>
@@ -156,26 +156,6 @@ export default function HomePage() {
               Ver Todos los Productos
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 text-teal-800 dark:bg-teal-800">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="space-y-6">
-            <h2 className="text-3xl md:text-4xl font-bold text-white">¿Listo para comenzar a comprar?</h2>
-            <p className="text-xl text-teal-100">
-              Únete a miles de clientes satisfechos y descubre por qué Sanda es la mejor opción para tus compras online.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-white dark:bg-teal-900 text-teal-600 dark:text-teal-200 hover:bg-gray-100 px-8 py-3">
-                Crear Cuenta Gratis
-              </Button>
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-teal-700 px-8 py-3">
-                Explorar Catálogo
-              </Button>
-            </div>
           </div>
         </div>
       </section>

@@ -11,7 +11,7 @@ export const CarouselHome = () => {
                             <Card className="py-0">
                                 <CardContent className="items-center justify-center p-0 ">
                                     <div
-                                        className="object-cover w-full h-52 rounded-lg bg-blue-300"
+                                        className="object-cover w-full h-52 rounded-lg bg-teal-300"
                                     />
                                 </CardContent>
                             </Card>

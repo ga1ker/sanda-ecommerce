@@ -29,7 +29,7 @@ export default function ProductPage({ params }: { params: { id: string } }) {
           <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
             <div className="hidden md:flex flex-col gap-2">
               {[1, 2, 3, 4, 5].map((item) => (
-                <div key={item} className="border rounded cursor-pointer hover:border-blue-500">
+                <div key={item} className="border rounded cursor-pointer hover:border-teal-500">
                   <Image
                     src="/placeholder.svg?height=80&width=80"
                     width={80}
