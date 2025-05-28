@@ -30,7 +30,7 @@ export const UserNav = () => {
                             <Button onClick={() => {}} className="cursor-pointer bg-[#26A69A] hover:bg-[#26A69A]/80">Cerrar sesión</Button>
                         </PopoverContent>
                     ) : (
-                        <PopoverContent className="justify-between gap-2 bg-[#80CBC4] border-none">
+                        <PopoverContent className="flex justify-between gap-2 bg-[#80CBC4] border-none">
                             <Button onClick={openLogin} className="cursor-pointer bg-[#26A69A] hover:bg-[#26A69A]/80">Iniciar sesión</Button>
                             <Button variant="secondary" onClick={openSignup} className="cursor-pointer dark:bg-gray-700 bg-gray-200 hover:bg-gray-300">Registrarse</Button>
                         </PopoverContent>

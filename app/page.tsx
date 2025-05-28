@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Star, Truck, Shield, Headphones, ArrowRight } from "lucide-react"
+import { ProductCard } from "@/components/product-card"
 
 export default function HomePage() {
   const featuredProducts = [
@@ -65,16 +66,16 @@ export default function HomePage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-teal-50 to-teal-100 py-20">
+      <section className="bg-gradient-to-br from-teal-50 to-teal-100 dark:to-teal-900 dark:from-black py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
               <div className="space-y-4">
-                <Badge className="bg-teal-100 text-teal-800 dark:text-teal-300 hover:bg-teal-200">¡Nuevos productos disponibles!</Badge>
-                <h1 className="text-4xl md:text-6xl font-bold text-gray-900 leading-tight">
+                <Badge className="bg-teal-100 text-teal-800 hover:bg-teal-200">¡Nuevos productos disponibles!</Badge>
+                <h1 className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white leading-tight">
                   Descubre lo mejor en <span className="text-teal-600 dark:text-teal-200">Sanda</span>
                 </h1>
-                <p className="text-xl text-gray-600 leading-relaxed">
+                <p className="text-xl text-gray-600 dark:text-gray-300 leading-relaxed">
                   Tu tienda online de confianza con los mejores productos, precios increíbles y servicio excepcional.
                   ¡Compra ahora y disfruta de envío gratis!
                 </p>
@@ -123,8 +124,8 @@ export default function HomePage() {
             {features.map((feature, index) => (
               <div key={index} className="text-center space-y-4">
                 <div className="flex justify-center">{feature.icon}</div>
-                <h3 className="text-xl font-semibold text-gray-900">{feature.title}</h3>
-                <p className="text-gray-600">{feature.description}</p>
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-200">{feature.title}</h3>
+                <p className="text-gray-600 dark:text-gray-400">{feature.description}</p>
               </div>
             ))}
           </div>
@@ -136,47 +137,17 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center space-y-4 mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900">Productos Destacados</h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-600 dark:text-gray-200 max-w-2xl mx-auto">
               Descubre nuestra selección de productos más populares con ofertas especiales
             </p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {featuredProducts.map((product) => (
-              <Card key={product.id} className="group hover:shadow-lg transition-shadow duration-300">
-                <CardContent className="p-4">
-                  <div className="relative mb-4">
-                    <Image
-                      src={product.image || "/placeholder.svg"}
-                      alt={product.name}
-                      width={300}
-                      height={300}
-                      className="w-full h-48 object-cover rounded-lg"
-                    />
-                    <Badge className="absolute top-2 left-2 bg-red-500 text-white">
-                      -{Math.round(((product.originalPrice - product.price) / product.originalPrice) * 100)}%
-                    </Badge>
-                  </div>
-                  <div className="space-y-2">
-                    <h3 className="font-semibold text-gray-900 group-hover:text-teal-600 dark:text-teal-200 transition-colors">
-                      {product.name}
-                    </h3>
-                    <div className="flex items-center space-x-1">
-                      <div className="flex text-yellow-400">
-                        {[...Array(5)].map((_, i) => (
-                          <Star key={i} className="h-4 w-4 fill-current" />
-                        ))}
-                      </div>
-                      <span className="text-sm text-gray-500">({product.reviews})</span>
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      <span className="text-2xl font-bold text-teal-600 dark:text-teal-200">${product.price}</span>
-                      <span className="text-sm text-gray-500 line-through">${product.originalPrice}</span>
-                    </div>
-                    <Button className="w-full text-teal-800 dark:bg-teal-800 hover:bg-teal-700 text-white">Agregar al Carrito</Button>
-                  </div>
-                </CardContent>
-              </Card>
+              <ProductCard 
+                key={product.id}
+                id={product.id}
+              />
             ))}
           </div>
 
