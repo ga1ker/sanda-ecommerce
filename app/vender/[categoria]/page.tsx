@@ -79,7 +79,7 @@ const categoriesData: Record<string, CategoryData> = {
         id: "terrenos",
         name: "Terrenos",
         description: "Lotes, terrenos urbanos y rurales",
-        fields: ["superficie", "zonificacion", "servicios", "ubicacion", "documentos"],
+        fields: ["superficie", "zonificacion", "servicios"],
       },
       {
         id: "locales-comerciales",

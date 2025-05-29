@@ -26,8 +26,18 @@ interface FormField {
 const fieldConfigurations: Record<string, Record<string, FormField[]>> = {
   productos: {
     electronicos: [
-      { name: "marca", label: "Marca", type: "text", required: true, placeholder: "Ej: Samsung, Apple, Sony" },
-      { name: "modelo", label: "Modelo", type: "text", required: true, placeholder: "Ej: Galaxy S23, iPhone 14" },
+      { 
+        name: "marca", 
+        label: "Marca", 
+        type: "text", 
+        required: true, 
+        placeholder: "Ej: Samsung, Apple, Sony" },
+      { 
+        name: "modelo", 
+        label: "Modelo", 
+        type: "text", 
+        required: true, 
+        placeholder: "Ej: Galaxy S23, iPhone 14" },
       {
         name: "estado",
         label: "Estado",
@@ -73,6 +83,57 @@ const fieldConfigurations: Record<string, Record<string, FormField[]>> = {
         type: "select",
         required: true,
         options: ["Hombre", "Mujer", "Unisex", "Niño", "Niña"],
+      },
+    ],
+    "hogar-jardin": [
+      { 
+        name: "dimensiones-alto", 
+        label: "Altura (muebles)", 
+        type: "number", 
+        required: false, 
+        placeholder: "Ingresa los metros de alto" 
+      },
+      { 
+        name: "dimensiones-ancho", 
+        label: "Ancho (muebles)", 
+        type: "number", 
+        required: false, 
+        placeholder: "Ingresa los metros de ancho" 
+      },
+      { 
+        name: "material", 
+        label: "Material", 
+        type: "text", 
+        required: false, 
+        placeholder: "Ej: Madera" 
+      },
+      {
+        name: "color",
+        label: "Color",
+        type: "text",
+        required: false,
+        placeholder: "Ej: Morado"
+      },
+      {
+        name: "estado",
+        label: "Estado",
+        type: "select",
+        required: true,
+        options: ["Nuevo", "Usado - Excelente", "Usado - Muy Bueno", "Usado - Bueno" ],
+      },
+      {
+        name: "Marca",
+        label: "Marca",
+        type: "select",
+        required: true,
+        options:["IKEA","Ashley Furniture",
+"Muebles Ros",
+"Muebles JJP",
+"Muebles Azor",
+"Muebles Miv",
+"Muebles Max Descuento",
+"Muebles Intermobil",
+"Muebles Interiores",]
       },
     ],
   },
@@ -126,6 +187,31 @@ const fieldConfigurations: Record<string, Record<string, FormField[]>> = {
         required: false,
         placeholder: "Ej: Piscina, Gimnasio, Seguridad 24hs",
       },
+    ],
+    terrenos: [
+      {
+        name: "superficie",
+        label: "Superficie",
+        type: "number",
+        required: true,
+        placeholder: "Ingresa los metros cuadrados",
+      },
+      {
+        name: "servicios",
+        label: "Servicios",
+        type: "textarea",
+        required: true,
+        placeholder: "Servicios del terreno",
+      },
+      {
+        name: "zonificacion",
+        label: "Zonificación",
+        type: "select",
+        required: true,
+        placeholder: "Zonificacion",
+        options: ["Residencial", "Comercial", "Mixta", "Industrial", "Recreativa", "Agricola"],
+      },
+      
     ],
   },
   servicios: {
