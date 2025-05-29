@@ -2,6 +2,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
+import { Providers } from "./providers"; // <-- IMPORTANTE
 import "flowbite";
 
 const geistSans = Geist({
@@ -25,16 +26,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es" className="">
+    <html lang="es" suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Header />
-        <div className="min-h-dvh dark:bg-gray-900 mt-23 bg-teal-400/10">
-          {children}
-        </div>
-        <Footer />
+        <Providers>
+          <Header />
+          <div className="min-h-dvh dark:bg-gray-900 mt-23 bg-teal-400/10">
+            {children}
+          </div>
+          <Footer />
+        </Providers>
       </body>
     </html>
   );
 }
+
