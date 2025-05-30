@@ -11,17 +11,22 @@ import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Badge } from "@/components/ui/badge"
-import { ArrowLeft, Upload, Plus, X } from "lucide-react"
+import { ArrowLeft, Upload, Plus, X, Search } from "lucide-react"
+
 import Link from "next/link"
+import { ComboBox } from "@/components/ui/comboBox"
+import { Value } from "@radix-ui/react-select"
 
 interface FormField {
   name: string
   label: string
-  type: "text" | "number" | "select" | "textarea"
+  type: "text" | "number" | "select" | "textarea" | "comboBox"
   required: boolean
   options?: string[]
   placeholder?: string
 }
+
+
 
 const fieldConfigurations: Record<string, Record<string, FormField[]>> = {
   productos: {
@@ -124,16 +129,43 @@ const fieldConfigurations: Record<string, Record<string, FormField[]>> = {
       {
         name: "Marca",
         label: "Marca",
+        type: "comboBox",
+        required: true,
+        options:["IKEA",
+          "Ashley Furniture",
+          "Muebles Ros",
+          "Muebles JJP",
+          "Muebles Azor",
+          "Muebles Miv",
+          "Muebles Max Descuento",
+          "Muebles Intermobil",
+          "Muebles Interiores",
+        ]
+      },
+    ],
+    "deportes-fitness": [
+      {
+        name: "deporte",
+        label: "Deporte",
         type: "select",
         required: true,
-        options:["IKEA","Ashley Furniture",
-"Muebles Ros",
-"Muebles JJP",
-"Muebles Azor",
-"Muebles Miv",
-"Muebles Max Descuento",
-"Muebles Intermobil",
-"Muebles Interiores",]
+        options: ["XS", "S", "M", "L", "XL", "XXL", "Talla única"],
+      },
+      { name: "color", label: "Color", type: "text", required: true, placeholder: "Ej: Azul marino, Rojo, Negro" },
+      {
+        name: "material",
+        label: "Material",
+        type: "text",
+        required: false,
+        placeholder: "Ej: Algodón 100%, Poliéster, Cuero",
+      },
+      { name: "marca", label: "Marca", type: "text", required: false, placeholder: "Ej: Nike, Adidas, Zara" },
+      {
+        name: "genero",
+        label: "Género",
+        type: "select",
+        required: true,
+        options: ["Hombre", "Mujer", "Unisex", "Niño", "Niña"],
       },
     ],
   },
@@ -349,6 +381,7 @@ const fieldConfigurations: Record<string, Record<string, FormField[]>> = {
 }
 
 export default function PublicarPage() {
+
   const searchParams = useSearchParams()
   const router = useRouter()
   const categoria = searchParams.get("categoria")
@@ -357,7 +390,7 @@ export default function PublicarPage() {
   const [formData, setFormData] = useState<Record<string, string>>({})
   const [images, setImages] = useState<string[]>([])
   const [isSubmitting, setIsSubmitting] = useState(false)
-
+  const [selected, setOnSelected] = useState("")
   const fields = categoria && subcategoria ? fieldConfigurations[categoria]?.[subcategoria] || [] : []
 
   useEffect(() => {
@@ -399,6 +432,7 @@ export default function PublicarPage() {
     return null
   }
 
+  
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
@@ -519,6 +553,13 @@ export default function PublicarPage() {
                             value={formData[field.name] || ""}
                             onChange={(e) => handleInputChange(field.name, e.target.value)}
                             required={field.required}
+                          />
+                        ) : field.type === "comboBox" ?(
+                          <ComboBox
+                          label={field.label}
+                          options={field.options}
+                          onSelect={(value)=>setOnSelected(value)}
+                          selectedValue={selected}
                           />
                         ) : (
                           <Input
