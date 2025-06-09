@@ -43,7 +43,7 @@ const categoriesData: Record<string, CategoryData> = {
         id: "deportes-fitness",
         name: "Deportes y Fitness",
         description: "Equipamiento deportivo, ropa deportiva",
-        fields: ["deporte", "talla", "marca", "estado", "nivel"],
+        fields: ["deporte", "talla", "marca", "estado", "año"],
       },
       {
         id: "libros-musica",
@@ -55,7 +55,7 @@ const categoriesData: Record<string, CategoryData> = {
         id: "juguetes-bebes",
         name: "Juguetes y Bebés",
         description: "Juguetes, artículos para bebés, puericultura",
-        fields: ["edad", "marca", "estado", "material", "seguridad"],
+        fields: ["edad", "marca", "estado"],
       },
     ],
   },

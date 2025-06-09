@@ -23,6 +23,7 @@ export const ComboBox = ({ label, options = [], onSelect, selectedValue }: Combo
         onChange={(e) => {
           setSearch(e.target.value);
           setExpanded(true);
+          
         }}
         onFocus={() => setExpanded(true)}
         onBlur={() => setTimeout(() => setExpanded(false), 200)} // tiempo para permitir clic en opciones

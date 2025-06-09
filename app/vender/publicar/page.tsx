@@ -127,7 +127,7 @@ const fieldConfigurations: Record<string, Record<string, FormField[]>> = {
         options: ["Nuevo", "Usado - Excelente", "Usado - Muy Bueno", "Usado - Bueno" ],
       },
       {
-        name: "Marca",
+        name: "marca",
         label: "Marca",
         type: "comboBox",
         required: true,
@@ -143,30 +143,105 @@ const fieldConfigurations: Record<string, Record<string, FormField[]>> = {
         ]
       },
     ],
+    "libros-musica":[
+      {
+        name:"autor",
+        label: "Autor",
+        type: "text",
+        required: true
+      },
+      {
+        name:"generoMusical",
+        label: "Genero Musical",
+        type: "comboBox",
+        required: false,
+        options:["Rock",
+          "Pop",
+          "Metal",
+          "Regional Mexicano"
+        ]
+      },
+      {
+        name:"idioma",
+        label: "Idioma",
+        type: "select",
+        required: true,
+        options:["Español",
+          "English"
+        ]
+      },
+      {
+        name: "estado",
+        label: "Estado",
+        type: "select",
+        required: true,
+        options: ["Nuevo", "Usado - Excelente", "Usado - Muy Bueno", "Usado - Bueno" ],
+      },
+      {
+        name: "year",
+        label: "año",
+        type: "number",
+        required: true,
+      },
+    ],
     "deportes-fitness": [
       {
         name: "deporte",
         label: "Deporte",
+        type: "comboBox",
+        required: true,
+        options: ["Fútbol", "Baloncesto", "Béisbol", "Tenis", "Golf", "Boxeo", "Natación", "Ciclismo", "Atletismo", "Esquí", "Snowboard", "Hockey Sobre Hielo", "Hockey Sobre Césped", "Rugby", "Cricket", "Voleibol", "Surf", "Skateboarding", "Escalada", "Alpinismo", "Senderismo", "Buceo", "Kárate", "Taekwondo", "Judo", "Mma", "Esgrima", "Equitación", "Automovilismo", "Motociclismo", "Bádminton", "Ping Pong", "Padel", "Parkour", "Vela", "Remo", "Pesca Deportiva", "Gimnasia", "Halterofilia", "Lucha Libre", "Aeróbic", "Pilates", "Yoga", "Paintball", "Airsoft", "Caza Deportiva", "Triatlón", "Polo", "Curling", "Lanzamiento De Disco", "Lanzamiento De Jabalina", "Tiro Con Arco", "Tiro Deportivo", "Rafting", "Canotaje", "Kitesurf", "Windsurf", "Bodyboard", "Snorkel", "Slackline", "Breakdance", "Cheerleading"],
+      },
+      {
+        name: "talla",
+        label: "Talla",
         type: "select",
         required: true,
         options: ["XS", "S", "M", "L", "XL", "XXL", "Talla única"],
       },
-      { name: "color", label: "Color", type: "text", required: true, placeholder: "Ej: Azul marino, Rojo, Negro" },
       {
-        name: "material",
-        label: "Material",
-        type: "text",
-        required: false,
-        placeholder: "Ej: Algodón 100%, Poliéster, Cuero",
+       name: "marca",
+        label: "Marca",
+        type: "comboBox",
+        required: true,
+        options:["Nike", "Adidas", "Puma", "Under Armour", "Reebok", "New Balance", "Asics", "Fila", "Mizuno", "Columbia", "The North Face", "Patagonia", "Salomon", "Merrell", "Skechers", "Converse", "Vans", "Jordan", "Champion", "Oakley", "Speedo", "Arena", "Brooks", "Saucony", "Hoka One One", "Lotto", "Diadora", "Kappa", "Le Coq Sportif", "Umbro", "Castore", "Joma", "Kelme", "Slazenger", "Everlast", "Lonsdale", "Wilson", "Head", "Babolat", "Yonex", "Dunlop", "Spalding", "Molten", "Mikasa", "Decathlon", "Quechua", "Domyos", "Kipsta", "Artengo", "Tribord", "Northwave", "Pedaled", "Fox Racing", "Altra", "Inov-8", "Xtep", "361 Degrees", "Li-Ning", "Anta", "Peak", "Erke", "Trek", "Specialized", "Giant", "Cannondale", "Scott", "Shimano", "Thule", "Oakley", "Osprey", "Camelbak"]
       },
-      { name: "marca", label: "Marca", type: "text", required: false, placeholder: "Ej: Nike, Adidas, Zara" },
       {
-        name: "genero",
-        label: "Género",
+        name: "estado",
+        label: "Estado",
         type: "select",
         required: true,
-        options: ["Hombre", "Mujer", "Unisex", "Niño", "Niña"],
+        options: ["Nuevo", "Usado - Excelente", "Usado - Muy Bueno", "Usado - Bueno" ],
       },
+      {
+        name: "year",
+        label: "Año",
+        type: "number",
+        required: false,
+      },
+    ],
+    "juguetes-bebes": [
+      {
+        name: "edad",
+        label: "Edad",
+        type: "number",
+        required: false,
+        placeholder:"pj. 4 años"
+      },
+      {
+        name: "marca",
+        label: "Marca",
+        type: "comboBox",
+        required: true,
+        options:["Fisher-Price", "Chicco", "Vtech", "LeapFrog", "Playskool", "Melissa & Doug", "Little Tikes", "Playmobil", "Lego", "Mattel", "Hasbro", "Nerf", "Hot Wheels", "Barbie", "Mega Bloks", "Tomy", "Baby Einstein", "Bright Starts", "Infantino", "Lamaze", "Hape", "Skip Hop", "B. Toys", "Manhattan Toy", "Janod", "Tiny Love", "Lovevery", "SmartMax", "Djeco", "Brio", "Green Toys", "Fat Brain Toys", "Battat", "KidKraft", "Step2", "WowWee", "Spin Master", "Hexbug", "Clementoni", "Ravensburger", "Vulli", "Oball", "Gund", "Ty", "Play-Doh", "Crayola", "Tonka", "L.O.L. Surprise!", "Paw Patrol", "Peppa Pig", "Disney Baby", "Sesame Street", "Little Dutch", "PlanToys"]
+      },
+      {
+        name: "estado",
+        label: "Estado",
+        type: "select",
+        required: true,
+        options: ["Nuevo", "Usado - Excelente", "Usado - Muy Bueno", "Usado - Bueno" ],
+      }
     ],
   },
   inmuebles: {
