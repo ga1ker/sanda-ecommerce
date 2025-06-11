@@ -4,6 +4,7 @@ import { ShoppingCart, Star } from "lucide-react";
 import { Card, CardContent } from "./ui/card";
 import { Badge } from "./ui/badge";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 type ProductCardProps = {
     id: number;
@@ -12,9 +13,10 @@ type ProductCardProps = {
 export const ProductCard = ({
     id
 }: ProductCardProps) => {
+
     return (
         <Card className="group hover:shadow-lg hover:cursor-pointer transition-shadow duration-300">
-            <Link href={"product/" + id}>
+            <Link href={`/product/${id}`}>
                 <CardContent className="p-4">
                   <div className="relative mb-4">
                     <Image
