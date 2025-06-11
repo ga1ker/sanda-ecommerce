@@ -91,7 +91,7 @@ const categoriesData: Record<string, CategoryData> = {
         id: "quintas-campos",
         name: "Quintas y Campos",
         description: "Propiedades rurales, quintas, estancias",
-        fields: ["hectareas", "construcciones", "agua", "accesos", "produccion"],
+        fields: ["hectareas", "construcciones", "servicios","accesos", "produccion"],
       },
     ],
   },
