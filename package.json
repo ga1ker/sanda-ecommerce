@@ -33,6 +33,7 @@
     "react": "^19.0.0",
     "react-date-picker": "^11.0.0",
     "react-dom": "^19.0.0",
+    "react-native-paper": "^5.14.5",
     "react-responsive-carousel": "^3.2.23",
     "react-use": "^17.6.0",
     "tailwind-merge": "^3.3.0",
