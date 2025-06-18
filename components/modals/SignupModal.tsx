@@ -30,10 +30,6 @@ export const SignupModal = () => {
             title="Crear cuenta"
             footer={
                 <div className="flex justify-end space-x-2">
-                    <Button onClick={() => {
-                        closeSignup();
-                        openLogin();
-                    }}>Ya tengo cuenta</Button>
                     <Button onClick={handleSignup} className="bg-[#26A69A] hover:bg-[#4DB6AC] cursor-pointer">Registrarse</Button>
                 </div>
             }
